@@ -1,7 +1,6 @@
-<?php
+<?php 
 
-class MainControler extends Controler
-{
+class MainControler extends Controler {
     public function process(array $parameters): void
     {
         $this->head = array(
@@ -10,5 +9,5 @@ class MainControler extends Controler
             "description" => "Bezpečné přihlášení se systémem PUL"
         );
         $this->view = "main";
-    }
+}
 }
