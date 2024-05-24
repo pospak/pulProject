@@ -36,7 +36,7 @@ body{
 .mainTitle::after{
     content: '';
     display: block;
-    width: 50%;
+    width: 34.589654%;
     height: 2px;
     background-color: #02f869;
     margin: 10px auto;
