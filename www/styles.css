@@ -48,7 +48,7 @@ h2{
     color: var(--text-color);
 }
 
-.mainTitle a{
+a{
     text-decoration: none;
     color: var(--text-color);
 }
