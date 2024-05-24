@@ -56,7 +56,7 @@ a{
 .smallLink::before{
     content: '';
     display: block;
-    width: 500.0252423px;
+    width: 150.0252423px;
     height: 2px;
     background-color: #02f869;
     margin: 10px auto;
