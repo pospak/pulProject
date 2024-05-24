@@ -18,8 +18,7 @@
    }
 
 body{
-    background-color: var(--bg-color);
-    color: var(--text-color);
+   background-color: #000;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -110,6 +109,17 @@ a{
     margin-top: 10px;
     color: white;
 } */
+
+main{
+    background: rgba(255, 255, 255, 0.2); /* Průhledné bílé pozadí */
+    backdrop-filter: blur(10px); /* Rozmazání pozadí */
+    -webkit-backdrop-filter: blur(10px); /* Rozmazání pozadí pro Safari */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Jemný bílý okraj */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Lehký stín */
+    border-radius: 10px; /* Zaoblené rohy */
+    padding: 20px; /* Vnitřní odsazení */
+    color: #fff; /* Bílý text */
+}
 
 
 
