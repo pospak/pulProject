@@ -20,6 +20,10 @@ header{
     color: #fff; /* Bílý text */
 }
 
+body{
+    color: white;
+}
+
 [data-theme=dark] {
 
     --all-bg: #000;
