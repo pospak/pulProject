@@ -9,6 +9,16 @@
     --bg-color: #fff;
     --text-color: #000;
 }
+header{
+    background: rgba(255, 255, 255, 0.2); /* Průhledné bílé pozadí */
+    backdrop-filter: blur(10px); /* Rozmazání pozadí */
+    -webkit-backdrop-filter: blur(10px); /* Rozmazání pozadí pro Safari */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Jemný bílý okraj */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Lehký stín */
+    border-radius: 10px; /* Zaoblené rohy */
+    padding: 20px; /* Vnitřní odsazení */
+    color: #fff; /* Bílý text */
+}
 
 [data-theme=dark] {
 
@@ -63,15 +73,14 @@ a{
 
 /************footer**************/
 .footer {
-    background-color: rgba(0,0,0,0.6629026610644257);
-    color: white;
-    padding: 20px 0;
-    text-align: center;
-    bottom: 0;
-    top: 100%;
-    width: 100%;
-    border-radius: 10px;
-    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.2); /* Průhledné bílé pozadí */
+    backdrop-filter: blur(10px); /* Rozmazání pozadí */
+    -webkit-backdrop-filter: blur(10px); /* Rozmazání pozadí pro Safari */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Jemný bílý okraj */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Lehký stín */
+    border-radius: 10px; /* Zaoblené rohy */
+    padding: 20px; /* Vnitřní odsazení */
+    color: #fff; /* Bílý text */
     
 }
 
