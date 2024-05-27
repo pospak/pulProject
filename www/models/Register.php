@@ -1,3 +1,4 @@
+
 <?php
 
 class Register{
@@ -6,9 +7,9 @@ class Register{
         $password = password_hash($password, PASSWORD_DEFAULT);
         $sql = "INSERT INTO PospakTubeUsers (targetID, username, password, email) VALUES (?, ?, ?, ?)";
         $stmt = $connection->prepare($sql);
-        $stmt->bind_param("sssi", $username, $password, $email,552);
+        $stmt->bind_param("isss",552, $username, $password, $email);
         $stmt->execute();
-        return true;
+
     }
     public static function PospakLyrics($username, $password,$email) {
         
