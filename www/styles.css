@@ -165,6 +165,13 @@ input[type="password"]{
     background: transparent;
 }
 
+input[type="submit"]{
+    text-decoration: none;
+    color: white;
+    background: transparent;
+    border: none;
+}
+
 
 
 /************Grid layout (60% chatGPT)**************/
