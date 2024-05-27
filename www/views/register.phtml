@@ -12,7 +12,7 @@
 </div>
 <div class="column"></div>
 </div>
-<script src="script.js"></script>
+<script src="RegScript.js"></script>
 <script src="https://unpkg.com/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://unpkg.com/tippy.js@6.3.1/dist/tippy-bundle.umd.min.js"></script>
 <script>
@@ -20,22 +20,4 @@
             allowHTML: true,
         });
 
-</script>
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const passwordInput = document.querySelector('input[name="password"]');
-        const passVerifyInput = document.querySelector('input[name="passVerify"]');
-        const submitButton = document.querySelector('input[name="submit"]');
-
-        function checkPasswordMatch() {
-            if (passwordInput.value !== passVerifyInput.value) {
-                submitButton.disabled = true;
-            } else {
-                submitButton.disabled = false;
-            }
-        }
-
-        passwordInput.addEventListener('input', checkPasswordMatch);
-        passVerifyInput.addEventListener('input', checkPasswordMatch);
-    });
 </script>
