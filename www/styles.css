@@ -165,6 +165,15 @@ input[type="password"]{
     background: transparent;
 }
 
+input[type="email"]{
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #02f869;
+    background: transparent;
+}
+
 input[type="submit"]{
     text-decoration: none;
     color: white;
