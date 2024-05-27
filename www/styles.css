@@ -136,5 +136,29 @@ main{
     color: #fff; /* Bílý text */
 }
 
+input[type="text"]{
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #02f869;
+}
+input[type="password"]{
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #02f869;
+}
+input[type="submit"]{
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #02f869;
+    background-color: #02f869;
+    color: white;
+    cursor: pointer;
+}
 
 
