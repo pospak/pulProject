@@ -61,12 +61,12 @@ h2{
 
 }
 
-a{
+a, .links{
     text-decoration: none;
     color: white;
 }
 
-a:hover{
+.links:hover{
     width: 100%;
     padding: 10px;
     margin: 10px 0;
