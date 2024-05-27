@@ -10,6 +10,7 @@ class LoginControler extends Controler {
         );
 
         $url = $parameters[0];
+        $this->data["url"] = $url;
         switch ($url){
             case "pospakTube":
                 $this->view = "login";
@@ -18,8 +19,9 @@ class LoginControler extends Controler {
             
                     $username = $_POST["username"];
                     $password = $_POST["password"];
-                    if ($login->PospakTube($username, $password)){
-                       header("Location: http://pospaktube.batcave.net/logged/$username");
+                    $targetID = $login->PospakTube($username, $password);
+                    if ($targetID!=false){
+                       header("Location: http://pospaktube.batcave.net/logged/$targetID");
                        session_start();
                           $_SESSION["logged"] = $username;
                         $_SESSION["password"] = $password;
