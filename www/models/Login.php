@@ -2,6 +2,7 @@
 class Login{
     public static function PospakTube($username, $password) {
         $connection = Database::getConnection();
+        $password = password_hash($password, PASSWORD_DEFAULT);
         $sql = "SELECT * FROM PospakTubeUsers WHERE username = ? AND password = ?";
         $stmt = $connection->prepare($sql);
         $stmt->bind_param("ss", $username, $password);
