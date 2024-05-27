@@ -13,6 +13,7 @@ class LoginControler extends Controler {
         switch ($url){
             case "pospakTube":
                 $this->view = "login";
+                if(isset($_POST["submit"])){
                 $login = new Login();
             
                     $username = $_POST["username"];
@@ -25,6 +26,7 @@ class LoginControler extends Controler {
                     } else {
                       echo "<script>alert('Nesprávné jméno nebo heslo')</script>";
                     }
+                }
                
         }
     }
