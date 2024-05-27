@@ -64,9 +64,21 @@ h2{
 a{
     text-decoration: none;
     color: white;
-   
-
 }
+
+a:hover{
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #02f869;
+    background-color: #02f869;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+
 
 .smallLink::before{
     content: '';
@@ -163,6 +175,10 @@ input[type="submit"]{
     cursor: pointer;
 }
 
+input[type="submit"]:hover{
+    background-color: #02f869;
+    color: white;
+}
 
 /************Grid layout (60% chatGPT)**************/
 .container {
