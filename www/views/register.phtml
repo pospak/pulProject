@@ -21,3 +21,21 @@
         });
 
 </script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const passwordInput = document.querySelector('input[name="password"]');
+        const passVerifyInput = document.querySelector('input[name="passVerify"]');
+        const submitButton = document.querySelector('input[name="submit"]');
+
+        function checkPasswordMatch() {
+            if (passwordInput.value !== passVerifyInput.value) {
+                submitButton.disabled = true;
+            } else {
+                submitButton.disabled = false;
+            }
+        }
+
+        passwordInput.addEventListener('input', checkPasswordMatch);
+        passVerifyInput.addEventListener('input', checkPasswordMatch);
+    });
+</script>
