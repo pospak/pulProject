@@ -48,6 +48,7 @@ class RegisterControler extends Controler
                         echo "<script>alert('Registrace se nezdařila')</script>";
                     }
                 }
+                break;
         }
     }
 }
