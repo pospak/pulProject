@@ -15,7 +15,7 @@ const passVerifyInput = document.querySelector('input[name="passVerify"]');
     form.addEventListener('input', () => {
         function checkPasswordMatch() {
             if (passwordInput.value !== passVerifyInput.value) {
-                submitButton.disabled = isAnyInputEmpty;
+                submitButton.disabled = true;
             }else{
                 submitButton.disabled = isAnyInputEmpty;
             }
