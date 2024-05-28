@@ -12,7 +12,7 @@ const passVerifyInput = document.querySelector('input[name="passVerify"]');
 
     // Disable or enable the submit button based on the input status
     
-    form.addEventListener('input', () => {
+  
         function checkPasswordMatch() {
             if (passwordInput.value !== passVerifyInput.value) {
                 submitButton.disabled = true;
@@ -38,4 +38,4 @@ const passVerifyInput = document.querySelector('input[name="passVerify"]');
     submitButton.style.color = "white";
     submitButton.style.cursor = "pointer";
     }
-});
+
