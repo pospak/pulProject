@@ -20,7 +20,7 @@ class RegisterControler extends Controler
                     $password = $_POST["password"];
                     $email = $_POST["email"];
                     $reg = $register->PospakTube($username, $password, $email);
-                    if ($reg!=false){
+                    if ($reg){
                         function redirectByEmailProvider($email) {
                             $emailProviders = array(
                               "email.cz" => "https://email.cz",
