@@ -9,7 +9,7 @@ class Register{
         $stmt->bind_param("isss",552, $username, password_hash($password, PASSWORD_DEFAULT), $email);
         $stmt->execute();
         $result= $stmt->get_result();
-if($result->num_rows>0){
+if($result){
     $from = "PospakTube Auto Messaging system <no-reply@pul.skauting.cz>";
         $message = file_get_contents('/mail_template.php');
         emailSender::send($email, "Registrace do PospakTube", $message, $from);

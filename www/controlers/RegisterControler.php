@@ -42,7 +42,8 @@ class RegisterControler extends Controler
                   
                             echo "<meta http-equiv='refresh' content='0;url=$redirectUrl'>";
                         }
-                        session_start();
+                        echo "<script>alert('Registrace proběhla úspěšně! Teď prosím zkontroluj svůj email a ověř svůj účet pomocí odkazu který ti přišel...')</script>";
+                        redirectByEmailProvider($email);
                     } else {
                         echo "<script>alert('Registrace se nezdařila')</script>";
                     }
