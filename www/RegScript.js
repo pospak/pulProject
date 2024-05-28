@@ -4,23 +4,24 @@ const submitButton = document.querySelector('input[type="submit"]');
 const passwordInput = document.querySelector('input[name="password"]');
 const passVerifyInput = document.querySelector('input[name="passVerify"]');
 // Add an event listener to the form's input elements
-form.addEventListener('input', () => {
-    function checkPasswordMatch() {
-        if (passwordInput.value !== passVerifyInput.value) {
-            submitButton.disabled = true;
-        } else {
-            submitButton.disabled = false;
-        }
-    }
+
     // Check if any required input is empty
     const inputs = Array.from(form.querySelectorAll('input[required]'));
-    passwordInput.addEventListener('input', checkPasswordMatch);
-    passVerifyInput.addEventListener('input', checkPasswordMatch);
+    
     const isAnyInputEmpty = inputs.some(input => input.value.trim() === '');
 
     // Disable or enable the submit button based on the input status
-    submitButton.disabled = isAnyInputEmpty;
-
+    
+    form.addEventListener('input', () => {
+        function checkPasswordMatch() {
+            if (passwordInput.value !== passVerifyInput.value) {
+                submitButton.disabled = isAnyInputEmpty;
+            }else{
+                submitButton.disabled = isAnyInputEmpty;
+            }
+        }
+        passwordInput.addEventListener('input', checkPasswordMatch);
+        passVerifyInput.addEventListener('input', checkPasswordMatch);
     // Apply different styles to the submit button based on its disabled status
     if (submitButton.disabled) {
         submitButton.style.textDecoration="none";
@@ -36,6 +37,5 @@ form.addEventListener('input', () => {
     submitButton.style.backgroundColor = "#02f869";
     submitButton.style.color = "white";
     submitButton.style.cursor = "pointer";
-    
     }
 });
