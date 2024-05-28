@@ -5,7 +5,7 @@ class Register{
     public static function PospakTube($username, $password, $email) {
         $connection = new mysqli("localhost","us011718","MP838IT356","db011718");
         $sql = "INSERT INTO PospakTubeUsers (username, password, email) VALUES (?, ?, ?)";
-        $stmt = $connection->prepare($sql);
+        $stmt = $connection->prepare("INSERT INTO PospakTubeUsers (username, password, email) VALUES (?, ?, ?)");
         $stmt->bind_param("sss", $username, password_hash($password, PASSWORD_DEFAULT), $email);
         $stmt->execute();
     
