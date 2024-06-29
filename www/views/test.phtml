@@ -1,0 +1,14 @@
+
+<h1>Videa</h1>
+
+<div class="container">
+<?php foreach ($artists as $artist) : ?>
+<div class="column">
+    <a href="video/<?=$artist["url"]?>">
+        
+    <iframe src="https://www.youtube.com/embed<?=$artist['videoUrl'] ?>" frameborder="0"></iframe><br>
+    <p class="title">
+        <?= $artist['title'] ?> | <?= $artist["series"]?>
+    </p></a></div>
+<?php endforeach; ?>
+</div>
