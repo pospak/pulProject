@@ -13,7 +13,7 @@ class Register{
         ob_start();
 
         // Načtení obsahu šablony
-        include 'mail_template.php';
+        include '/mail_template.php';
         
         // Získání obsahu šablony do proměnné $message
         $message = ob_get_clean();
