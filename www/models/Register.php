@@ -11,23 +11,7 @@ class Register{
     
 
         // Získání obsahu šablony do proměnné $message
-        $message = "<main>
-        <h1>Díky za registraci</h1>
-        <p>Děkuju moc za registraci na webu PospakTube</p>
-        <p>Od možnosti používat tenhle web naplno tě už dělí jenom poslední věc - oěření emailu.</p>
-        <p>To provedeš kliknutím na následující tlačítko:</p>
-        <br><br><br>
-        <a href='https://pul.skauting.cz/email-verify/<?=$email?>' class='links'>Ověřit</a><br><br>
-    <strong>
-        S Pozdravem POSPÁK 65
-    </strong>
-    </main>
-    <br clear='both' />
-        <footer>
-            <p>POSPAK's Universal Login | &copy; 2024</p>
-        </footer>
-    </body>
-    </html>";
+        $message = file_get_contents("/mail_template.php");
         
         // Definování odesílatele
         $from = "PospakTube Auto Messaging system <no-reply@pul.skauting.cz>";
