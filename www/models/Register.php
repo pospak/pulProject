@@ -10,23 +10,33 @@ class Register{
         $stmt->execute();
     
 
-        ob_start();
-
-        // Načtení obsahu šablony
-        include 'mail_template.php';
-        
         // Získání obsahu šablony do proměnné $message
-        $message = ob_get_clean();
+        $message = "<main>
+        <h1>Díky za registraci</h1>
+        <p>Děkuju moc za registraci na webu PospakTube</p>
+        <p>Od možnosti používat tenhle web naplno tě už dělí jenom poslední věc - oěření emailu.</p>
+        <p>To provedeš kliknutím na následující tlačítko:</p>
+        <br><br><br>
+        <a href='https://pul.skauting.cz/email-verify/<?=$email?>' class='links'>Ověřit</a><br><br>
+    <strong>
+        S Pozdravem POSPÁK 65
+    </strong>
+    </main>
+    <br clear='both' />
+        <footer>
+            <p>POSPAK's Universal Login | &copy; 2024</p>
+        </footer>
+    </body>
+    </html>";
         
         // Definování odesílatele
         $from = "PospakTube Auto Messaging system <no-reply@pul.skauting.cz>";
         
-        $headers = "MIME-Version: 1.0" . "\r\n";
-        $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+     
         
         // Hlavička From
-        $headers .= "From: " . $from . "\r\n";
-        mail($to, $subject, $message, $headers);
+     emailSender::send($email, "Děkujeme za registraci", $message, $from);
+       
         return true;
      
     }
