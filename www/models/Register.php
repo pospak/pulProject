@@ -10,9 +10,19 @@ class Register{
         $stmt->execute();
     
 
-    /* $from = "PospakTube Auto Messaging system <no-reply@pul.skauting.cz>";
-        $message = file_get_contents('/mail_template.php');
-        emailSender::send($email, "Registrace do PospakTube", $message, $from); */
+        ob_start();
+
+        // Načtení obsahu šablony
+        include 'mail_template.php';
+        
+        // Získání obsahu šablony do proměnné $message
+        $message = ob_get_clean();
+        
+        // Definování odesílatele
+        $from = "PospakTube Auto Messaging system <no-reply@pul.skauting.cz>";
+        
+        // Odeslání e-mailu
+        emailSender::send($email, "Registrace do PospakTube", $message, $from);
         return true;
      
     }
