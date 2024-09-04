@@ -10,9 +10,9 @@ class Register{
         $stmt->execute();
     
 
-    $from = "PospakTube Auto Messaging system <no-reply@pul.skauting.cz>";
+    /* $from = "PospakTube Auto Messaging system <no-reply@pul.skauting.cz>";
         $message = file_get_contents('/mail_template.php');
-        emailSender::send($email, "Registrace do PospakTube", $message, $from);
+        emailSender::send($email, "Registrace do PospakTube", $message, $from); */
         return true;
      
     }
