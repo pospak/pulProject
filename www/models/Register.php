@@ -21,8 +21,12 @@ class Register{
         // Definování odesílatele
         $from = "PospakTube Auto Messaging system <no-reply@pul.skauting.cz>";
         
-        // Odeslání e-mailu
-        emailSender::send($email, "Registrace do PospakTube", $message, $from);
+        $headers = "MIME-Version: 1.0" . "\r\n";
+        $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+        
+        // Hlavička From
+        $headers .= "From: " . $from . "\r\n";
+        mail($to, $subject, $message, $headers);
         return true;
      
     }
