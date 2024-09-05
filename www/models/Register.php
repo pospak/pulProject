@@ -38,17 +38,7 @@ class Register{
             padding: 20px; /* Vnitřní odsazení */
             color: #fff; /* Bílý text */
         }
-        
-        body{
-            color: white;
-        }
-        
-        [data-theme=dark] {
-        
-            --all-bg: #000;
-            --all-color: #fff;
-            
-           }
+      
         
         body{
            background-color: #000;
@@ -56,6 +46,7 @@ class Register{
             margin: 0;
             padding: 0;
             text-align: center;
+            color: white;
         }
         
         
