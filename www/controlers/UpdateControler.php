@@ -10,9 +10,6 @@ class UpdateControler extends Controler
         $stmt = $connection->prepare("UPDATE PospakTubeUsers SET target = ? WHERE username = ?");
         $stmt->bind_param("is", $id,$username);
         $stmt->execute();
-
-        session_start();
-        $_SESSION["logged"] = $username;
         echo "<script>alert('Registrace proběhla úspěšně')</script>";
         header("Location: http://pospaktube.batcave.net/");
     }
