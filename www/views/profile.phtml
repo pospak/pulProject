@@ -7,7 +7,8 @@
         <div class="column"></div>
         <div class="column">
     <a href="change/photo"><img src="<?=$data["profilePhoto"]?>" alt="profile-img-<?=$data["username"]?>" class="profile-img-cover"></a>
-    </div>
+    <h2><a href="change/username"><img src="username.svg" height="50" width="50" alt="username-icon"><?=$data["username"]?></a><br></h2>    
+</div>
 </div>
 </div>
 
@@ -15,15 +16,14 @@
 <div class="column">
 <div id="profile">
     <!-- username -->
-        <a href="change/username"><img src="username.svg" height="50" width="50" alt="username-icon"><?=$data["username"]?></a><br>
+        
         <!-- password -->
-        <a href="change/password"><img src="password.svg" height="50" width="50" alt="password-icon"><p id="passwordField"><?=$pass?></p></a>
+        <a href="change/password"><img src="password.svg" height="50" width="50" alt="password-icon"><p id="passwordField"><?=$data["password"]?></p></a>
         <!--password visibility switch -->
         <img id="eye" alt="show-icon" onclick="togglePasswordVisibility('passwordField')" style="cursor: pointer;" width="20px" height="20px"><br>
         <!-- email -->
         <a href="change/email"><img src="email.png" alt="email-icon" width="50" height="50"><?=$data["email"]?></a><br>
-        <!-- phone -->
-        <a href="change/phone"><img src="phone.svg" alt="phone-icon" width="50" height="50"><?=$data["phone"]?></a>
+        
 </div>
 </div>
 <!-- right column -->
