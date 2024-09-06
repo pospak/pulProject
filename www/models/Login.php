@@ -1,16 +1,15 @@
 <?php
 class Login{
-    public static function PospakTube($username, $password) {
+    public static function PospakTube($username) {
         $connection = Database::getConnection();
-        $password = password_hash($password, PASSWORD_DEFAULT);
-        $sql = "SELECT * FROM PospakTubeUsers WHERE username = ? AND password = ?";
+        $sql = "SELECT * FROM PospakTubeUsers WHERE username = ?";
         $stmt = $connection->prepare($sql);
-        $stmt->bind_param("ss", $username, $password);
+        $stmt->bind_param("s", $username);
         $stmt->execute();
         $result = $stmt->get_result();
         $row = $result->fetch_assoc();
         if ($row) {
-            return $row["targetID"];
+            return $row;
         } else {
             return false;
         }

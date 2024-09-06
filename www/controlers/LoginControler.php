@@ -19,16 +19,22 @@ class LoginControler extends Controler {
             
                     $username = $_POST["username"];
                     $password = $_POST["password"];
-                    $targetID = $login->PospakTube($username, $password);
+                    $targetID = $login->PospakTube($username);
                     if ($targetID!=false){
-                       header("Location: http://pospaktube.batcave.net/login/$targetID");
-                       session_start();
-                        $_SESSION["logged"] = $username;
-                        $_SESSION["password"] = $password;
+                        $id = $targetID["target"];
+                        $passwordFromDB = $targetID["password"];
+                        if (password_verify($password, $passwordFromDB)){
+                       header("Location: http://pospaktube.batcave.net/login/$id");
+                        } else {
+                          echo "<script>alert('Nesprávné heslo')</script>";
+                        }
                     } else {
-                      echo "<script>alert('Nesprávné jméno nebo heslo')</script>";
+                      echo "<script>alert('Uživatel nenalezen!')</script>";
                     }
                 }
+                break;
+            case "pospakLyrics":
+                break;
                
         }
     }
