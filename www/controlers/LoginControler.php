@@ -24,7 +24,13 @@ class LoginControler extends Controler {
                         $id = $targetID["target"];
                         $passwordFromDB = $targetID["password"];
                         if (password_verify($password, $passwordFromDB)){
-                       header("Location: http://pospaktube.batcave.net/login/$id");
+                        if($targetID["verify"]==0){
+                            echo "<script>('Tvůj email dosud nebyl ověřen! Než budeš moct pokračovat zkontroluj emailovou schránku a ověř si jej pomocí odkazu, který ti přišel v uvítací zprávě. (Pokud byl podle tvého emailu rozpoznán jeho poskytovatel, budeš po zavření tohoto upozornění automaticky přesměrován na jeho stránku)')</script>";
+                            EmailRedirect::redirectByEmailProvider($targetID["email"]);
+                        }else{
+                            header("Location: http://pospaktube.batcave.net/login/$id");
+                        }
+                     
                         } else {
                           echo "<script>alert('Nesprávné heslo')</script>";
                         }

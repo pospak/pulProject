@@ -21,29 +21,8 @@ class RegisterControler extends Controler
                     $email = $_POST["email"];
                     $reg = $register->PospakTube($username, $password, $email);
                     if ($reg){
-                        function redirectByEmailProvider($email) {
-                            $emailProviders = array(
-                              "email.cz" => "https://email.cz",
-                              "seznam.cz" => "https://email.cz",
-                              "gmail.com" => "https://mail.google.com",
-                              "outlook.com" => "https://outlook.live.com",
-                              "hotmail.com" => "https://outlook.live.com",
-                              "skaut.cz" => "https://mail.google.com"
-                            );
-                  
-                            $parts = explode("@", $email);
-                            $lastPart = end($parts);
-                  
-                            if (array_key_exists($lastPart, $emailProviders)) {
-                              $redirectUrl = $emailProviders[$lastPart];
-                            } else {
-                              $redirectUrl = "/main";
-                            }
-                  
-                            echo "<meta http-equiv='refresh' content='0;url=$redirectUrl'>";
-                        }
-                        echo "<script>alert('Registrace proběhla úspěšně! Teď prosím zkontroluj svůj email a ověř svůj účet pomocí odkazu který ti přišel...')</script>";
-                        redirectByEmailProvider($email);
+                        echo "<script>alert('Registrace proběhla úspěšně! Teď prosím zkontroluj svůj email a ověř svůj účet pomocí odkazu který ti přišel... (Pokud byl podle tvého emailu rozpoznán jeho poskytovatel, budeš po zavření tohoto upozornění automaticky přesměrován na jeho stránku)')</script>";
+                        EmailRedirect::redirectByEmailProvider($email);
                     } else {
                         echo "<script>alert('Registrace se nezdařila')</script>";
                     }
