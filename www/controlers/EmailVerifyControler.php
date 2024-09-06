@@ -11,7 +11,8 @@ class EmailVerifyControler extends Controler
         $stmt2 = $connection->prepare("SELECT username FROM PospakTubeUsers WHERE email = ?");
         $stmt2->bind_param("s", $email);
         $stmt2->execute();
-        $username = $stmt2->get_result();
+        $usernameResult = $stmt2->get_result();
+        $username = $usernameResult->fetch_assoc()["username"];
         $stmt->bind_param("s", $email);
         $stmt->execute();
         echo "<script>alert('Email byl úspěšně ověřen!')</script>";
