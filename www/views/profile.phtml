@@ -1,0 +1,48 @@
+
+<!-- main container -->
+<div class="container">
+    <!-- left column -->
+<div class="column"><div id="profile">
+    <div class="container">
+        <div class="column"></div>
+        <div class="column">
+    <a href="change/photo"><img src="<?=$data["profilePhoto"]?>" alt="profile-img-<?=$data["username"]?>" class="profile-img-cover"></a>
+    </div>
+</div>
+</div>
+
+<!-- middle column -->
+<div class="column">
+<div id="profile">
+    <!-- username -->
+        <a href="change/username"><img src="username.svg" height="50" width="50" alt="username-icon"><?=$data["username"]?></a><br>
+        <!-- password -->
+        <a href="change/password"><img src="password.svg" height="50" width="50" alt="password-icon"><p id="passwordField"><?=$pass?></p></a>
+        <!--password visibility switch -->
+        <img id="eye" alt="show-icon" onclick="togglePasswordVisibility('passwordField')" style="cursor: pointer;" width="20px" height="20px"><br>
+        <!-- email -->
+        <a href="change/email"><img src="email.png" alt="email-icon" width="50" height="50"><?=$data["email"]?></a><br>
+        <!-- phone -->
+        <a href="change/phone"><img src="phone.svg" alt="phone-icon" width="50" height="50"><?=$data["phone"]?></a>
+</div>
+</div>
+<!-- right column -->
+<div class="column">
+
+<script>
+    
+    var eye = document.getElementById("eye");
+    eye.src = "show.svg";
+    var field = document.getElementById("passwordField");
+    field.style.display = "none";
+          function togglePasswordVisibility(fieldId) {
+        
+        if (field.style.display === "inline-block") {
+            field.style.display = "none";
+            eye.src = "show.svg";
+        } else {
+            field.style.display = "inline-block";
+            eye.src = "hide.svg";
+        }
+    }
+        </script>
