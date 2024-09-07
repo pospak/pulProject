@@ -9,7 +9,8 @@ class EmailRedirect
           "gmail.com" => "https://mail.google.com",
           "outlook.com" => "https://outlook.live.com",
           "hotmail.com" => "https://outlook.live.com",
-          "skaut.cz" => "https://mail.google.com"
+          "skaut.cz" => "https://mail.google.com",
+          "icloud.com" => "https://www.icloud.com"
         );
 
         $parts = explode("@", $email);
