@@ -1,4 +1,9 @@
-<h1>Přihlášení</h1>
+<?php
+if($user == "skipaIs"){
+    $user = "Škípa - Is";
+}
+?>
+<h1>Přihlášení | <?=$user?></h1>
 <div class="container">
 <div class="column"></div>
 <div class="column">
@@ -12,6 +17,8 @@
 
 if(!isset($url) || $url !="skipaIs"):
     ?>
+
+    
     <p>
         Jsi tu nový? <a href="register/<?=$url?>" class="links">Zaregistruj se!</a>
     </p>
