@@ -39,7 +39,26 @@ class LoginControler extends Controler {
                     }
                 }
                 break;
-            case "pospakLyrics":
+            case "skipaIs":
+                $this->view = "login";
+                if(isset($_POST["submit"])){	
+                    $login = new Login();
+                    $username = $_POST["username"];
+                    $password = $_POST["password"];
+                    $user = $login->SkipaIs($username, $password);
+                    $passwordFromDB = $user["password"];
+                    if ($user!=false){
+                        if (password_verify($password, $passwordFromDB)){
+                            $id = $user["id"];
+                            header("Location: https://skipa-is.skauting.cz/login/$id");
+                        } else {
+                            echo "<script>alert('Nesprávné heslo')</script>";
+                        }
+                    } else {
+                        echo "<script>alert('Uživatel nenalezen!')</script>";
+                    }
+                }
+
                 break;
                
         }

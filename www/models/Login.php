@@ -14,16 +14,18 @@ class Login{
             return false;
         }
     }
-    public static function PospakLyrics($username, $password) {
-        
-    }
-    public static function MIMAJSPOCreate($username, $password) {
-        
-    }
-    public static function CitrakStrava($username, $password) {
-        
-    }
     public static function skipaIs($username, $password) {
-        
+        $connection = new mysqli("localhost", "us011225","Skorpik444","db011225");
+        $sql = "SELECT * FROM skipaUsers WHERE username = ?";
+        $stmt = $connection->prepare($sql);
+        $stmt->bind_param("s", $username);
+        $stmt->execute();
+        $result = $stmt->get_result();	
+        $row = $result->fetch_assoc();
+        if ($row){
+            return $row;
+        }else{
+            return false;
+        }
     }
 }
