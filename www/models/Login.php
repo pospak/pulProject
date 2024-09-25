@@ -14,7 +14,7 @@ class Login{
             return false;
         }
     }
-    public static function skipaIs($username, $password) {
+    public static function skipaIs($username) {
         $connection = new mysqli("localhost", "us011225","Skorpik444","db011225");
         $sql = "SELECT * FROM skipaUsers WHERE username = ?";
         $stmt = $connection->prepare($sql);

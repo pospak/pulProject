@@ -45,7 +45,7 @@ class LoginControler extends Controler {
                     $login = new Login();
                     $username = $_POST["username"];
                     $password = $_POST["password"];
-                    $user = $login->SkipaIs($username, $password);
+                    $user = $login->SkipaIs($username);
                     $passwordFromDB = $user["password"];
                     if ($user!=false){
                         if (password_verify($password, $passwordFromDB)){
