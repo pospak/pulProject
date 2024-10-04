@@ -26,6 +26,7 @@ form.addEventListener('input', () => {
     submitButton.style.backgroundColor = "#02f869";
     submitButton.style.color = "white";
     submitButton.style.cursor = "pointer";
+    submitButton.style.transition = "all 0.3 ease"
     
     }
 });
