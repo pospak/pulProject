@@ -15,6 +15,7 @@
 body {
     color: white;
     background-image: url("/images/login.jpg");
+    background-size:contain;
     font-family: Arial, sans-serif;
     margin: 20px;
     text-align: center;
