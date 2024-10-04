@@ -9,8 +9,8 @@ if($url == "skipaIs"){
 <div class="column">
 <form action="" method="post">
 <h1>Přihlášení | <?=$url?></h1>
-    <input type="text" name="username" id="" required placeholder="Uživatelské jméno" <?php if($url="Škípa - Is"):?>data-tippy-content="Pokud sis jméno neměnil, je nastavené na tvoji přezdívku s velkým písmenem na začátku a bez diakritiky."<?php endif;?>>
-    <input type="password" name="password" id="" required placeholder="Heslo" <?php if($url="Škípa - Is"):?>data-tippy-content="Pokud se přihlašuješ poprvé, prosím obnov si heslo pomocí tlačítka níže!"<?php endif;?>>
+    <input type="text" name="username" id="" required placeholder="Uživatelské jméno" <?php if($url=="Škípa - Is"):?>data-tippy-content="Pokud sis jméno neměnil, je nastavené na tvoji přezdívku s velkým písmenem na začátku a bez diakritiky."<?php endif;?>>
+    <input type="password" name="password" id="" required placeholder="Heslo" <?php if($url=="Škípa - Is"):?>data-tippy-content="Pokud se přihlašuješ poprvé, prosím obnov si heslo pomocí tlačítka níže!"<?php endif;?>>
     <input type="submit" value="Přihlásit se" name="submit">
 </form>
 <br><br>
