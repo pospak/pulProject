@@ -14,7 +14,7 @@
 /* Body Styles */
 body {
     color: white;
-    background-color: #000;
+    background-image: url("/images/login.jpg");
     font-family: Arial, sans-serif;
     margin: 20px;
     text-align: center;
@@ -22,7 +22,7 @@ body {
 
 /* Header Styles */
 header {
-    background: rgba(255, 255, 255, 0.2); /* Transparent white background */
+   
     backdrop-filter: blur(10px); /* Background blur */
     -webkit-backdrop-filter: blur(10px); /* Background blur for Safari */
     border: 1px solid rgba(255, 255, 255, 0.3); /* Light white border */
@@ -172,7 +172,7 @@ a,
 
 /* Footer Styles */
 .footer {
-    background: rgba(255, 255, 255, 0.2); /* Transparent white background */
+    
     backdrop-filter: blur(10px); /* Background blur */
     -webkit-backdrop-filter: blur(10px); /* Background blur for Safari */
     border: 1px solid rgba(255, 255, 255, 0.3); /* Light white border */
