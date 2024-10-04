@@ -215,7 +215,7 @@ form{
     border-radius: 10px; /* Rounded corners */
     padding: 20px; /* Inner padding */
     color: #fff; /* White text */
-    width: 50%;
+    width: max-content;
     margin: 0 auto;
 
 }
