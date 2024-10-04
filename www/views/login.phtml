@@ -3,13 +3,14 @@ if($url == "skipaIs"){
     $url = "Škípa - Is";
 }
 ?>
-<h1>Přihlášení | <?=$url?></h1>
+
 <div class="container">
 <div class="column"></div>
 <div class="column">
 <form action="" method="post">
-    <input type="text" name="username" id="" required>
-    <input type="password" name="password" id="" required>
+<h1>Přihlášení | <?=$url?></h1>
+    <input type="text" name="username" id="" required placeholder="Uživatelské jméno" <?php if($url="Škípa - Is"):?>data-tippy-content="Pokud sis jméno neměnil, je nastavené na tvoji přezdívku s velkým písmenem na začátku a bez diakritiky."<?php endif;?>>
+    <input type="password" name="password" id="" required placeholder="Heslo" <?php if($url="Škípa - Is"):?>data-tippy-content="Pokud se přihlašuješ poprvé, prosím obnov si heslo pomocí tlačítka níže!"<?php endif;?>>
     <input type="submit" value="Přihlásit se" name="submit">
 </form>
 <br><br>
@@ -29,3 +30,11 @@ if(!isset($url)||$url !="Škípa - Is"):
 <div class="column"></div></div>
 
 <script src="script.js"></script>
+<script src="https://unpkg.com/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://unpkg.com/tippy.js@6.3.1/dist/tippy-bundle.umd.min.js"></script>
+<script>
+  tippy('[data-tippy-content]', {
+            allowHTML: true,
+        });
+
+</script>
