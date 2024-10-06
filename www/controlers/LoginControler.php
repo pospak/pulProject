@@ -28,7 +28,11 @@ class LoginControler extends Controler {
                             echo "<script>alert('Tvůj email dosud nebyl ověřen! Než budeš moct pokračovat zkontroluj emailovou schránku a ověř si jej pomocí odkazu, který ti přišel v uvítací zprávě. (Pokud byl podle tvého emailu rozpoznán jeho poskytovatel, budeš po zavření tohoto upozornění automaticky přesměrován na jeho stránku)')</script>";
                             EmailRedirect::redirectByEmailProvider($targetID["email"]);
                         }else{
+                            if(isset($parameters["1"])&& $parameters["1"]=="pospaklyrics"){
+                            header("Location: http://pospaktube.batcave.net/login/$id/pospaklyrics");
+                            }else{
                             header("Location: http://pospaktube.batcave.net/login/$id");
+                            }
                         }
                      
                         } else {
